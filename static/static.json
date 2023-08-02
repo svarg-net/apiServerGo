@@ -1,0 +1,48 @@
+{
+  "menu": [
+    {
+      "href": "/about",
+      "text": "About",
+      "title": "About",
+      "target": "",
+      "type": "_blank"
+    },
+    {
+      "href": "/contact",
+      "text": "Contact",
+      "title": "contact",
+      "target": "",
+      "type": ""
+    }
+  ],
+  "pages": [
+    {
+      "link": "/about",
+      "meta": {
+        "description": "Page About",
+        "title": "About"
+      },
+      "block": [
+        {
+          "position": 1,
+          "tag": "h1",
+          "text": "H1 About"
+        }
+      ]
+    },
+    {
+      "link": "/contact",
+      "meta": {
+        "description": "Page Contact",
+        "title": "Contact"
+      },
+      "block": [
+        {
+          "position": 1,
+          "tag": "h1",
+          "text": "H1 Contact"
+        }
+      ]
+    }
+  ]
+}
