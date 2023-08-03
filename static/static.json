@@ -27,6 +27,11 @@
           "position": 1,
           "tag": "h1",
           "text": "H1 About"
+        },
+        {
+          "position": 2,
+          "tag": "p",
+          "text": "<b>text</b> <i>about</i>"
         }
       ]
     },
