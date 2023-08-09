@@ -22,6 +22,10 @@ type TypePage struct {
 	Blocks []TypeBLock `json:"block"`
 }
 type TypeData struct {
-	Menu  []TypeMenu `json:"menu"`
-	Pages []TypePage `json:"pages"`
+	Menu         []TypeMenu     `json:"menu"`
+	Pages        []TypePage     `json:"pages"`
+	ListPageSlug []ListPageSlug `json:"page-slug"`
+}
+type ListPageSlug struct {
+	Slug []string `json:"slug"`
 }

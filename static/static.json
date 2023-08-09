@@ -36,7 +36,7 @@
       ]
     },
     {
-      "link": "/contact",
+      "link": "/about/contact",
       "meta": {
         "description": "Page Contact",
         "title": "Contact"
@@ -47,6 +47,30 @@
           "tag": "h1",
           "text": "H1 Contact"
         }
+      ]
+    }
+  ],
+  "page-slug": [
+    {
+      "slug": [
+        "about"
+      ]
+    },
+    {
+      "slug": [
+        "about",
+        "contact"
+      ]
+    },
+    {
+      "slug": [
+        "blog"
+      ]
+    },
+    {
+      "slug": [
+        "blog",
+        "page1"
       ]
     }
   ]

@@ -8,14 +8,15 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func main() {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 	r.Use(middleware.AllowContentType("application/json"))
-	r.Get("/getpage/{slug}", func(w http.ResponseWriter, r *http.Request) {
-		slugParam := chi.URLParam(r, "slug")
+	r.Get("/get-page/{slug}", func(w http.ResponseWriter, r *http.Request) {
+		slugParam := strings.Replace(chi.URLParam(r, "slug"), ",", "/", -1)
 		dataFile, _ := os.ReadFile("static/static.json")
 		pages := model.TypeData{}
 		json.Unmarshal(dataFile, &pages)
@@ -29,6 +30,17 @@ func main() {
 			}
 		}
 		jsonPage, err := json.Marshal(page)
+		if err != nil {
+			fmt.Println(err)
+		}
+		w.Write(jsonPage)
+	})
+	r.Get("/getPagesSlug", func(w http.ResponseWriter, r *http.Request) {
+		dataFile, _ := os.ReadFile("static/static.json")
+		pages := model.TypeData{}
+		json.Unmarshal(dataFile, &pages)
+
+		jsonPage, err := json.Marshal(pages.ListPageSlug)
 		if err != nil {
 			fmt.Println(err)
 		}
